@@ -1,0 +1,41 @@
+{
+  "name": "react-currency-select",
+  "version": "0.0.1",
+  "description": "React component to select from international FX currencies, displaying flags alongside currency names",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "css",
+    "scss",
+    "flags",
+    "es",
+    "lib",
+    "umd"
+  ],
+  "scripts": {
+    "build": "nwb build-react-component",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.8"
+  },
+  "peerDependencies": {
+    "react": "15.x"
+  },
+  "devDependencies": {
+    "nwb": "0.15.x",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-syntax-highlight": "0.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andredicioccio/react-currency-select.git"
+  },
+  "author": "Andre DiCioccio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andredicioccio/react-currency-select/issues"
+  },
+  "homepage": "https://github.com/andredicioccio/react-currency-select#readme"
+}
