@@ -8,8 +8,6 @@ class ReactCurrencySelect extends Component {
 
         let fullCountries = Object.keys(countries);
 
-        const fullCurrencies = require('./currencies.json');
-
         let selectCountries = this.props.countries && this.props.countries.filter(country => {
             return countries[country];
         });
