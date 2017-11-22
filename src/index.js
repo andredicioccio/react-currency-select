@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import countries from './countries';
 
+import TextField from 'material-ui/TextField';
+
+
 class ReactCurrencySelect extends Component {
     constructor(props) {
         super(props);
@@ -116,7 +119,7 @@ class ReactCurrencySelect extends Component {
                      className={`flag-options ${alignClass}`}>
                     {this.props.searchable &&
                     <div className="filterBox">
-                        <input type="text" placeholder="Search" ref="filterText" onChange={this.filterSearch} />
+                        <TextField autoFocus placeholder="Search" ref="filterText" onChange={this.filterSearch} />
                     </div>
                     }
                     {(this.state.filter ? this.state.filteredCountries : this.state.countries).map(countryCode =>
