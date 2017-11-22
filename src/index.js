@@ -118,7 +118,7 @@ class ReactCurrencySelect extends Component {
                 <div ref="flagOptions" style={{ fontSize: `${optionsSize}px` }}
                      className={`flag-options ${alignClass}`}>
                     {this.props.searchable &&
-                    <div className="filterBox">
+                    <div className="filterBox" style={{marginLeft: 10}}>
                         <TextField autoFocus placeholder="Search" ref="filterText" onChange={this.filterSearch} />
                     </div>
                     }
