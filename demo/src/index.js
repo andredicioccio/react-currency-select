@@ -42,12 +42,13 @@ class Demo extends React.Component {
 					</div>
 					<div className="demo-group">
 						<div className="demo-group-title">
-							<span>Searchable</span>
+							<span>Searchable &amp; 'selectedColor' prop demo</span>
 						</div>
 						<div className="demo-source">
-							<Highlight lang={'js'} value={'<ReactCurrencySelect \n searchable={true} />'} />
+							<Highlight lang={'js'} value={'<ReactCurrencySelect \n searchable={true} \n selectedColor="red"/>'} />
 						</div>
 						<ReactCurrencySelect
+							selectedColor={'red'}
 						searchable={true} />
 					</div>
 					<div className="demo-group">
