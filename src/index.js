@@ -101,7 +101,9 @@ class ReactCurrencySelect extends Component {
                      onClick={this.toggleOptions}>
                     {isSelected &&
                     <span className="country-flag" style={{ width: `${selectedSize}px`, height: `${selectedSize}px` }}>
-							<img src={require(`../flags/${isSelected.toLowerCase()}.svg`)} />
+							<img src={require(`../flag
+
+							s/${isSelected.toLowerCase()}.svg`)} />
                         {this.props.showSelectedLabel &&
                         <span
                             className="country-label">{this.props.customLabels[isSelected] || countries[isSelected]}</span>
