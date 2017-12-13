@@ -101,9 +101,7 @@ class ReactCurrencySelect extends Component {
                      onClick={this.toggleOptions}>
                     {isSelected &&
                     <span className="country-flag" style={{ width: `${selectedSize}px`, height: `${selectedSize}px` }}>
-							<img src={require(`../flag
-
-							s/${isSelected.toLowerCase()}.svg`)} />
+							<img src={require(`../flags/${isSelected.toLowerCase()}.svg`)} />
                         {this.props.showSelectedLabel &&
                         <span
                             className="country-label">{this.props.customLabels[isSelected] || countries[isSelected]}</span>
@@ -118,7 +116,7 @@ class ReactCurrencySelect extends Component {
                 </div>
 
                 {this.state.openOptions &&
-                <div ref="flagOptions" style={{ fontSize: `${optionsSize}px` }}
+                <div ref="flagOptions" style={{ fontSize: `${optionsSize}px`, color: '#4d4d4d' }}
                      className={`flag-options ${alignClass}`}>
                     {this.props.searchable &&
                     <div className="filterBox" style={{marginLeft: 10}}>
