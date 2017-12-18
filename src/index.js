@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import countries from './countries';
 
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import TextField from 'material-ui/TextField';
+
+import lightBlue from 'material-ui/colors/lightBlue';
+
+
 
 
 class ReactCurrencySelect extends Component {
+
     constructor(props) {
         super(props);
 
@@ -36,6 +42,16 @@ class ReactCurrencySelect extends Component {
         this.closeOptions = this.closeOptions.bind(this);
         this.onSelect = this.onSelect.bind(this);
         this.filterSearch = this.filterSearch.bind(this);
+
+        this.theme = createMuiTheme({
+            palette: {
+                type: this.props.theme || 'light',
+                primary: lightBlue
+            },
+        });
+
+
+
     }
 
     toggleOptions() {
@@ -95,6 +111,8 @@ class ReactCurrencySelect extends Component {
         let alignClass = this.props.alignOptions.toLowerCase() === 'left' ? 'to--left' : '';
 
         return (
+            <MuiThemeProvider theme={this.theme}>
+
             <div className={`flag-select ${this.props.className ? this.props.className : ""}`} >
                 <div ref="selectedFlag" style={{ fontSize: `${selectedSize}px`, color: `${selectedColor}` }}
                      className={`selected--flag--option ${this.props.disabled ? 'no--focus' : ''}`}
@@ -140,6 +158,7 @@ class ReactCurrencySelect extends Component {
                 </div>
                 }
             </div>
+            </MuiThemeProvider>
         )
     }
 }
